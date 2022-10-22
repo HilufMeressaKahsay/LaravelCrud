@@ -25,3 +25,5 @@ Route::any('/login',[Account::class, 'LoginForm'] );
 Route::any('/auth',[Account::class, 'Authenticaion'] );
 Route::any('/forgot',[Account::class, 'Forget'] );
 Route::any('/reset',[Account::class, 'Reset'] );
+
+

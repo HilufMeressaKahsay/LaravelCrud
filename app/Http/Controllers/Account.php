@@ -15,7 +15,7 @@ class Account extends Controller
             'lastname'=>'required',
         ]);
 
-        if (Auth::attempt($request->only('firstname', 'lastname'))){
+        if (Auth::attempt($request->validate(['firstname', 'lastname']))){
             return view('Home');
         }
         return back()->with("error","User name and password is incorrect");
